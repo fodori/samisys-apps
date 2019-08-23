@@ -82,7 +82,7 @@
         { "component": "Accordion",
           "dataArray": [
             { "title": "First Element", "content": "Lorem ipsum dolor sit amet" },
-            { "title": "Second Element", "content": "Lorem ipsum dolor sit ametsasdfsdfaaaa" }
+            { "title": "Second Element", "content": "Lorem ipsum dolor sit " }
           ],
           "expanded": 1
         },
