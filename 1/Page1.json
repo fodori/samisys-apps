@@ -81,8 +81,8 @@
         },
         { "component": "Accordion",
           "dataArray": [
-            { "title": "First Element", "content": "Lorem ipsum dolor sit amet" },
-            { "title": "Second Element", "content": "Lorem ipsum dolor sit " }
+            { "title": "First Element", "content": "Ez egy teszt" },
+            { "title": "Second Element", "content": "Ez egy masik teszt" }
           ],
           "expanded": 1
         },
