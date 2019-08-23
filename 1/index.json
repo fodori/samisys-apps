@@ -1,0 +1,44 @@
+{ "component": "Navigator", "navigatorType": "DrawerNavigator",
+  "screens": {    
+    "Tabs": {"$ref":"./Page0.json"}, 
+    "Complicate": {"$ref":"./Page1.json"}, 
+    "Basic": {"$ref":"./Page2.json"},
+    "Clone": {"$ref":"./Page3.json"}, 
+    "ModuleForm": {"$ref":"./ModuleFormExample1.json",
+      "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k111a1" } }
+    }
+  },  
+  "navigatorOptions": {  
+    "initialRouteName": "Complicate",
+    "activeColor": "#f0edf6",
+    "inactiveColor": "#3e2465",
+    "transitionConfig": "zoomOut",
+    "barStyle": {
+      "backgroundColor": "#694fad"
+    },
+    "tabBarPosition": "top",
+    "tabBarOptions": {
+      "labelStyle": {
+        "fontSize": 12
+      },
+      "tabStyle": {},
+      "style": {
+        "backgroundColor": "blue"
+      }
+    }
+  },
+  "$locales": {
+    "en": {
+      "translation": {
+        "This is an e-mail placeholder": "Just placeholder",
+        "Hi":"Hi!"
+      }
+    },
+    "hu": {
+      "translation": {
+        "This is an e-mail placeholder": "Ez egy helykitöltő",
+        "Hi":"Hogy vagy??"
+      }
+    }
+  }
+}

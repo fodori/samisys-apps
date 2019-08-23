@@ -1,0 +1,113 @@
+{
+  "component": "ScrollView",
+  "id": "view00",
+  "style": {
+    "backgroundColor": "#F90"
+  },
+  "children": [
+    {
+      "component": "View",
+      "id": "view0",
+      "style": {
+        "backgroundColor": "#DDDDFF",
+        "flex": 1
+      },
+      "children": [
+        {
+          "component": "View",
+          "id": "view11",
+          "$stores":{"data":{"path": "view11"}},
+          "children": [
+            {
+              "component": "Text",
+              "children": "Demo",
+              "id": "text0",
+              "$stores":{"data":{"path": "text0"}},
+              "style": {
+                "textAlign": "center",
+                "fontSize": 25,
+                "fontWeight": "bold"
+              }
+            }
+          ],
+          "style": {
+            "textAlign": "center",
+            "fontSize": 25,
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "component": "Edit",
+          "$stores":{"data":{"path": "firstName"}},
+          "id": "First Name",
+          "placeholder": "TestPlaceholder",
+          "value": "wrong default",
+          "style": {
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "backgroundColor": "#ffEEaa"
+          }
+        },
+        {
+          "component": "View",
+          "$stores":{"data":{"type": "array","path": "contacts"}},
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "ui:widget": "updown",
+          "ui:options": {
+            "addable": false,
+            "orderable": false,
+            "removable": false
+          },
+          "children": [
+            {
+              "component": "Edit",
+              "id": "Last Name",
+              "$stores":{"data":{"path": "lastName"}},
+              "placeholder": "Test Placeholder"
+            },
+            {
+              "component": "View",
+              "$stores":{"data":{"path": "profile-Data"}},
+              "children": [
+                {
+                  "component": "Edit",
+                  "id": "E-mail",
+                  "$stores":{"data":{"path": "email"}}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "Button",
+          "children": "Submit",
+          "type": "submit"
+        },
+        {
+          "component": "Accordion",
+          "dataArray": [
+            {
+              "title": "First Element",
+              "content": "Lorem ipsum dolor sit amet"
+            },
+            {
+              "title": "Second Element",
+              "content": "Lorem ipsum dolor sit amet"
+            }
+          ],
+          "expanded": 1
+        },
+        { "$ref": "./Slider0.json"},
+        {
+          "component": "Modal",
+          "coverScreen": false
+        }
+      ]
+    },
+    {
+      "component": "FormResult", "stores":["data"] 
+    }
+  ]
+}

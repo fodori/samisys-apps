@@ -1,0 +1,6 @@
+{ "component": "Navigator", "navigatorType": "BottomTabNavigator",
+  "screens": {
+    "Red": { "component": "Text", "style": { "backgroundColor": "#EF0", "height": "100%" }, "children": "Page 02" },
+    "Green": { "component": "Text", "style": { "backgroundColor": "#0F0", "height": "100%" }, "children": "Page 03" }
+  }
+}

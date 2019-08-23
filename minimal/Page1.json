@@ -1,0 +1,104 @@
+{
+  "component": "SafeAreaView",
+  "children": [ 
+    {
+      "component": "ScrollView",
+      "id": "view00",
+      "style": { "backgroundColor": "#F90", "flex": 1  },
+      "$stores":{"justforAnotherTest":{"path":  "view00"} },
+      "children": [
+        "From Assets server",
+        { "component": "View", "id": "view0", "style": { "backgroundColor": "#DDDDFF", "flex": 1 },
+          "children": [
+            { "component": "View", "style": { "flex": 1 , "flexDirection":"row", "backgroundColor": "#AAFF" },
+              "children": [
+                { "component": "Button", 
+                  "transparent":true,
+                  "children": { "component": "Icon","ios":"ios-menu", "android":"md-menu", "style":{"fontSize": 25, "color": "blue"}},
+                  "onPress": {"$action":"openDrawer"}
+                },
+                { "component": "Icon","type":"FontAwesome", "name":"home"  },
+                { "component": "Checkbox", "children": "Demo1", "value": true, "style": { "marginRight": 10 } },
+                { "component": "Image", "style": { "width": 40, "height":50 }, "source": {"uri": "https://www.google.com/images/branding/product/2x/maps_96in128dp.png"} },
+                { "component": "Image", "style": { "width": 150, "height":50 }, "source": {"uri": "https://vastphotos.com/files/uploads/photos/10446/cozy-winter-scene-l.jpg" }},
+                { "component": "Image", "style": { "width": 40, "height":50 }, "source": { "$assetsRef":"./assets/logo-md.png"  }},
+                { "component": "Image", "style": { "width": 20, "height": 20, "resizeMode": "contain" },
+                  "source": { "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==" } }
+              ]
+            },
+            { "$ref": "./Edit0.json"},
+            { "component": "View", "id": "view1", "style": { "textAlign": "center", "fontSize": 25, "fontWeight": "bold" },
+              "$stores":{"data":{"path": "xxxxxxxxxxxxxxxx"}},
+              "children": [
+                { "component": "Text", "children": "Demo", "id": "text0",
+                  "$stores":{"data":{"path": "text0"}},
+                  "$subscriptions":[{"store":"data","path":"/slider","jsonataDef":"{\"children\":$}"}],
+                  "style": { "textAlign": "center", "fontSize": 25, "fontWeight": "bold" }
+                }
+              ]
+            },
+            { "component": "Edit", "style": { "fontSize": 16, "fontWeight": "bold", "backgroundColor": "#ffEEaa" },
+              "$stores":{"data":{"path": "firstName"}},
+              "id": "First Name",
+              "placeholder": "TestPlaceholder",
+              "value": "valami"
+            },
+            { "component": "View",
+              "$stores":{"data":{ "type": "array","path": "contacts"}},
+              "minItems": 1,
+              "maxItems": 10,
+              "uniqueItems": true,
+              "ui:widget": "updown",
+              "ui:options": { "addable": false, "orderable": false, "removable": false },
+              "children": [
+                { "component": "Edit",
+                  "id": "Last Name",
+                  "$stores":{"data":{"path":  "lastName"}},
+                  "placeholder": "Test Placeholder lastName"
+                },
+                { "component": "View",
+                  "$stores":{"data":{"path": "profile"}},
+                  "children": [
+                    {
+                      "component": "Edit",
+                      "id": "E-mail", 
+                      "$stores":{"data":{"path": "email"}},
+                      "placeholder": {"$function":"t","id":"emailPlaceholder"}
+                    }
+                  ]
+                }
+              ]
+            },
+            { "component": "Button", "children": "Navigate to Green",
+              "onPress": {"$action":"navigate","route":"Green"}
+            },
+            { "component": "Button", "children": "showError with 2 params",
+              "onPress": {"$action":"showError","params":["aaa","bbb"]}
+            },
+            { "component": "Button", "children": "get Store data + showError + 1 fix param",
+              "onPress": {"$action":"showWarn","params":[
+                {"$action":"getStoreState","store": "data","path":"/contacts"},
+                {"$action":"getStoreState","store": "data","path":"/contacts/0/lastName"},
+                "ccc"
+                ]}
+            },
+            { "component": "Accordion",
+              "dataArray": [
+                { "title": "First Element", "content": "Lorem ipsum dolor sit amet" },
+                { "title": "Second Element", "content": "Lorem ipsum dolor sit amet" }
+              ],
+              "expanded": 1
+            },
+            { "$ref": "./Slider0.json"},
+            { "component": "Modal", "coverScreen": false ,
+              "animationIn":"slideInUp",
+              "animationOut":"slideOutDown",
+              "animationType":"slide",
+              "children": "This is a content of Modal, Hurray!!!!! This is a content of Modal, Hurray!!!!!" }
+          ]
+        },
+        { "component": "FormResult", "stores":["ownForm","data","anotherStore"]  }
+      ]
+    }
+  ]
+}
