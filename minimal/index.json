@@ -1,32 +1,24 @@
-{
-  "component": "SafeAreaView",
-  "id":"SafeAreaView",
-  "style": { "marginTop": 20 },
-  "$stores": {"justforTest":{"path":  "SafeAreaView00"} },
-  "children": [
-    { "component": "Navigator", "navigatorType": "DrawerNavigator",
-      "screens": {
-        "Basic": {"$ref":"./Page2.json"}
+{ "component": "Navigator", "navigatorType": "DrawerNavigator",
+  "screens": {
+    "Basic": {"$ref":"./Page2.json"}
+  },
+  "navigatorOptions": {
+    "initialRouteName": "Basic",
+    "activeColor": "#f0edf6",
+    "inactiveColor": "#3e2465",
+    "transitionConfig": "zoomOut",
+    "barStyle": {
+      "backgroundColor": "#694fad"
+    },
+    "tabBarPosition": "top",
+    "tabBarOptions": {
+      "labelStyle": {
+        "fontSize": 12
       },
-      "navigatorOptions": {
-        "initialRouteName": "Basic",
-        "activeColor": "#f0edf6",
-        "inactiveColor": "#3e2465",
-        "transitionConfig": "zoomOut",
-        "barStyle": {
-          "backgroundColor": "#694fad"
-        },
-        "tabBarPosition": "top",
-        "tabBarOptions": {
-          "labelStyle": {
-            "fontSize": 12
-          },
-          "tabStyle": {},
-          "style": {
-            "backgroundColor": "blue"
-          }
-        }
+      "tabStyle": {},
+      "style": {
+        "backgroundColor": "blue"
       }
     }
-  ]
+  }
 }
