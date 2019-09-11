@@ -1,66 +1,71 @@
 {
-  "component": "ScrollView", "style": {"flex": 1 }, "id":"root",
-  "children": [
-    { "component": "View", "id":"w1",
+  "component":"SafeAreaView",
+  "children":[
+    {
+      "component": "ScrollView", "style": {"flex": 1 }, "id":"root",
       "children": [
-        "aaaaaaa", 23424, true,false,
-        { "component": "Edit", 
-
-          "label":"Label E-mail",
-          "placeholder":"Enter valid e-mail address", "id":"t1",
-          "helperText":"this is a helpertext",
-          "$stores": { "ownForm":{"path": "email" } }
-        },
-        { "component": "Edit", "placeholder":"Enter username", "id":"t2",
-          "$stores": { "ownForm":{ "path": "username" } }
-        },
-        { "component": "DropDown", "placeholder":"Enter options1", "id":"t2",
-          "label":"Label options1",
-          "options": [
-            {"value":"a","label":"A"},
-            {"value":"b","label":"B"},
-            {"value":"c","label":"C"},
-            {"value":"d","label":"D"},
-            {"value":"e","label":"E"}
-          ],
-          "$stores": { "ownForm":{ "path": "/option" } }
-        },
-        { "component": "View", "style": {"flex": 1, "flexDirection": "row","padding":10,"backgroundColor":"#FFDDFF"},
+        { "component": "View", "id":"w1",
           "children": [
-            { "component": "Text", "children": "subscribe" },
-            { "component": "Checkbox", "value": true, "style": { "marginRight": 20 },
-              "$stores": {  "ownForm":{ "path": "subscribe" } } ,"id":"t3"
+            "aaaaaaa", 23424, true,false,
+            { "component": "Edit", 
+
+              "label":"Label E-mail",
+              "placeholder":"Enter valid e-mail address", "id":"t1",
+              "helperText":"this is a helpertext",
+              "$stores": { "ownForm":{"path": "email" } }
             },
-            { "$ref": "./Edit0.json",
-              "label":"Label RefEdit",
-              "$storesModifier": {"anotherStore":{ "replaceTo": "ownForm" } }
+            { "component": "Edit", "placeholder":"Enter username", "id":"t2",
+              "$stores": { "ownForm":{ "path": "username" } }
+            },
+            { "component": "DropDown", "placeholder":"Enter options1", "id":"t2",
+              "label":"Label options1",
+              "options": [
+                {"value":"a","label":"A"},
+                {"value":"b","label":"B"},
+                {"value":"c","label":"C"},
+                {"value":"d","label":"D"},
+                {"value":"e","label":"E"}
+              ],
+              "$stores": { "ownForm":{ "path": "/option" } }
+            },
+            { "component": "View", "style": {"flex": 1, "flexDirection": "row","padding":10,"backgroundColor":"#FFDDFF"},
+              "children": [
+                { "component": "Text", "children": "subscribe" },
+                { "component": "Checkbox", "value": true, "style": { "marginRight": 20 },
+                  "$stores": {  "ownForm":{ "path": "subscribe" } } ,"id":"t3"
+                },
+                { "$ref": "./Edit0.json",
+                  "label":"Label RefEdit",
+                  "$storesModifier": {"anotherStore":{ "replaceTo": "ownForm" } }
+                }
+              ]
             }
           ]
-        }
-      ]
-    },
-    { "component": "Button", "children": "Validate data",
-      "onPress": {"$action":"validate","schema":{
-          "type": "object",
-          "properties": { 
-            "fakeProp0":{"type":"string","minLength": 2,"maxLength": 10},
-            "k":{
+        },
+        { "component": "Button", "children": "Validate data",
+          "onPress": {"$action":"validate","schema":{
               "type": "object",
               "properties": { 
-                "email":{"type":"string","minLength": 2,"maxLength": 10},
-                "username":{"type":"string","minLength": 2,"maxLength": 10},
-                "option":{"type":"string", "enum": ["a", "b", "c"]}
+                "fakeProp0":{"type":"string","minLength": 2,"maxLength": 10},
+                "k":{
+                  "type": "object",
+                  "properties": { 
+                    "email":{"type":"string","minLength": 2,"maxLength": 10},
+                    "username":{"type":"string","minLength": 2,"maxLength": 10},
+                    "option":{"type":"string", "enum": ["a", "b", "c"]}
+                  },
+                  "required":["email","fakeProp2"],
+                  "additionalItems": true
+                }
               },
-              "required":["email","fakeProp2"],
               "additionalItems": true
-            }
-          },
-          "additionalItems": true
-      },"store":"data"}
-    },
-    { "component": "FormResult", "stores":["ownForm","data","data.error"] },
-    { "component": "Button", "children": "Delete data persistent store",
-      "onPress": {"$action":"deleteAsyncStore","names":["data"]}
+          },"store":"data"}
+        },
+        { "component": "FormResult", "stores":["ownForm","data","data.error"] },
+        { "component": "Button", "children": "Delete data persistent store",
+          "onPress": {"$action":"deleteAsyncStore","names":["data"]}
+        }
+      ]
     }
   ]
 }

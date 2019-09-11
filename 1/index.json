@@ -1,16 +1,16 @@
 { "component": "Navigator", "navigatorType": "DrawerNavigator",
-  "screens": {       
+  "screens": {     
     "Tabs": {"$ref":"./Page0.json"}, 
     "Complicate": {"$ref":"./Page1.json"}, 
     "Basic": {"$ref":"./Page2.json"},
     "Clone": {"$ref":"./Page3.json"}, 
     "ModuleForm": {"$ref":"./ModuleFormExample1.json",
-      "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k111a1" } }
-    }
-  },  
-  "navigatorOptions": {  
+      "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k" } }
+    }   
+  },   
+  "navigationOptions": {
     "initialRouteName": "Complicate",
-    "activeColor": "#f0edf6",
+    "activeColor": "#f0edf6", 
     "inactiveColor": "#3e2465",
     "transitionConfig": "zoomOut",
     "barStyle": {
