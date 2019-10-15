@@ -1,5 +1,5 @@
 { "component": "Navigator", "navigatorType": "DrawerNavigator",
-  "screens": {     
+  "children": {     
     "Tabs": {"$ref":"./Page0.json"}, 
     "Complicate": {"$ref":"./Page1.json"}, 
     "Basic": {"$ref":"./Page2.json"},
