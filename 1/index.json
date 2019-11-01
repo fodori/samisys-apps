@@ -1,12 +1,11 @@
 { "component": "Navigator", "navigatorType": "DrawerNavigator",
-  "children": {     
+  "children": {
+    "Table": {"$ref":"./Table.json"}, 
     "Tabs": {"$ref":"./Page0.json"}, 
     "Complicate": {"$ref":"./Page1.json"}, 
     "Basic": {"$ref":"./Page2.json"},
     "Clone": {"$ref":"./Page3.json"}, 
-    "ModuleForm": {"$ref":"./ModuleFormExample1.json",
-      "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k" } }
-    }   
+    "ModuleForm": {"$ref":"./ModuleFormExample1.json", "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k" } } }
   },   
   "navigationOptions": {
     "initialRouteName": "Complicate",

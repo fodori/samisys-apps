@@ -4,20 +4,27 @@
     {
       "component": "ScrollView", "style": {"flex": 1 }, "id":"root",
       "children": [
-        { "component": "View", "id":"w1",
+        { "component": "View", "id":"w",
           "children": [
             "aaaaaaa", 23424, true,false,
-            { "component": "Edit", 
-
-              "label":"Label E-mail",
-              "placeholder":"Enter valid e-mail address", "id":"t1",
-              "helperText":"this is a helpertext",
-              "$stores": { "ownForm":{"path": "email" } }
+            { "component": "Text", "children": "Demo", "id": "demo",
+              "$subscriptions":[{"store":"ownForm","path":"level2/email","jsonataDef":"{\"children\":$}"}]
+            },
+            { "component": "View", "$stores": { "ownForm":{ "path": "level2" } },
+              "children": [
+                { "component": "Edit", 
+                  "id":"email",
+                  "label":"Label E-mail",
+                  "placeholder":"Enter valid e-mail address",
+                  "helperText":"this is a helpertext",
+                  "$stores": { "ownForm":{"path": "email" } }
+                }
+              ] 
             },
             { "component": "Edit", "placeholder":"Enter username", "id":"t2",
               "$stores": { "ownForm":{ "path": "username" } }
             },
-            { "component": "DropDown", "placeholder":"Enter options1", "id":"t2",
+            { "component": "DropDown", "placeholder":"Enter options1", "id":"t3",
               "label":"Label options1",
               "options": [
                 {"value":"a","label":"A"},
@@ -62,7 +69,7 @@
           },"store":"data"}
         },
         { "component": "FormResult", "stores":["ownForm","data","data.error"] },
-        { "component": "Button", "children": "Delete data persistent store",
+        { "component": "Button","children": "Delete data persistent store",
           "onPress": {"$action":"deleteAsyncStore","names":["data"]}
         }
       ]

@@ -7,7 +7,8 @@
       "style": { "backgroundColor": "#F90", "flex": 1  },
       "$stores":{"justforAnotherTest":{"path":  "view00"} },
       "children": [
-        "From Assets server",
+        "From Assets server", 
+        { "component": "Edit",  "disabled": true, "label": "Notification server connection status", "$stores": { "globalSetting": { "path": "notificationServerStatus" } } },
         { "component": "View", "id": "view0", "style": { "backgroundColor": "#DDDDFF", "flex": 1 },
           "children": [
             { "component": "View", "style": { "flex": 1 , "flexDirection":"row", "backgroundColor": "#AAFF" },
@@ -18,20 +19,26 @@
                   "children": { "component": "Icon","ios":"ios-menu", "android":"md-menu", "style":{"fontSize": 25, "color": "blue"}},
                   "onPress": {"$action":"openDrawer"}
                 },
-                { "component": "Icon","type":"FontAwesome", "name":"home"  },
-                { "component": "Checkbox", "children": "Demo1", "value": true, "style": { "marginRight": 10 } },
-                { "component": "Image", "style": { "width": 40, "height":50 }, "source": {"uri": "https://www.google.com/images/branding/product/2x/maps_96in128dp.png"} },
-                { "component": "Image", "style": { "width": 150, "height":50 }, "source": {"uri": "https://vastphotos.com/files/uploads/photos/10446/cozy-winter-scene-l.jpg" }},
+                { "component": "Icon","type":"FontAwesome", "name":"home"},
+                { "component": "Image", "style": { "width": 40, "height":50 }, "source": {"$assetsRef": "./assets/a.b.c.d.png" }},
                 { "component": "Image", "style": { "width": 40, "height":50 }, "source": { "$assetsRef":"./assets/logo-md.png" }},
                 { "component": "Image", "style": { "width": 20, "height": 20, "resizeMode": "contain" },
-                  "source": { "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==" } }
+                  "source": { "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==" } 
+                }
+              ]
+            },
+            { "component": "View", "style": { "flex": "1", "flexDirection":"row" },
+              "children": [
+                {"component": "ReactNativePaper","subcomponent":"Chip","icon":"home", "children":"Nebraska"},
+                {"component": "ReactNativePaper","subcomponent":"Chip","icon":"delete", "children":"Alabama"},
+                {"component": "ReactNativePaper","subcomponent":"Chip","icon":"phone", "children":"Oklahoma"}
               ]
             },
             { "$ref": "./Edit0.json"},
             { "component": "View", "id": "view1", "style": { "textAlign": "center", "fontSize": 25, "fontWeight": "bold" },
               "$stores":{"data":{"path": "xxxxxxxxxxxxxxxx"}},
               "children": [
-                { "component": "Text", "children": "Demo", "id": "text0",
+                { "component": "Text", "children": "Demo", "id": "demo",
                   "$stores":{"data":{"path": "text0"}},
                   "$subscriptions":[{"store":"data","path":"/slider","jsonataDef":"{\"children\":$}"}],
                   "style": { "textAlign": "center", "fontSize": 25, "fontWeight": "bold" }
@@ -40,9 +47,8 @@
             },
             { "component": "Edit", "style": { "fontSize": 16, "fontWeight": "bold", "backgroundColor": "#ffEEaa" },
               "$stores":{"data":{"path": "firstName"}},
-              "id": "First Name",
-              "placeholder": "TestPlaceholder",
-              "value": "valami"
+              "id": "firstName",
+              "placeholder": "TestPlaceholderr"
             },
             { "component": "View",
               "$stores":{"data":{ "type": "array","path": "contacts"}},
@@ -84,7 +90,8 @@
                 ]}
             },{ "component": "Button", "children": "Reload URL", "style": { "margin": 20 },
               "onPress": {"$action":"refreshApp","params":[
-                {"$action":"getStoreState","store": "globalSetting","path":"/contentServerUrl"}
+                {"$action":"getStoreState","store": "globalSetting","path":"/contentServerUrl"},
+                {"$action":"getStoreState","store": "globalSetting","path":"/notificationServerUrl"}
                 ]}
             },
             { "component": "Accordion",

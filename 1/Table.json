@@ -1,0 +1,70 @@
+{
+  "component":"SafeAreaView",
+  "id":"a1",
+  "children":[
+    {
+      "component": "ScrollView",
+      "id":"ScrollView1",
+      "style": { "backgroundColor": "#FFC", "flex": 1  },
+      "children": [
+        "Array test", 
+        {"component": "ReactNativePaper","subcomponent":"DataTable",
+          "children":[
+            {"component": "ReactNativePaper","subcomponent":"DataTable.Header",
+              "children":[
+                {"component": "ReactNativePaper","subcomponent":"DataTable.Title", "children":"Address" },
+                {"component": "ReactNativePaper","subcomponent":"DataTable.Title", "children":"Name" }
+              ]
+            },
+            {"component":"Fragment",
+              "id":"testList",
+              "isArray":true,
+              "$stores":{"data":{ "type": "array","path": "addressList"}},
+              "minItems": 1,
+              "maxItems": 10,
+              "uniqueItems": true,
+              "addable": false, 
+              "orderable": false, 
+              "removable": false,
+              "pagination":{
+                "page":0,
+                "itemPerPage":5,
+                "length":{"$function":"getStoreState", "store": "data", "path":".","jsonataDef":"$count($)"}
+              },
+              "item": {
+                "component": "View",
+                "id":"testListView",
+                  "style":{"flex":1, "flexDirection": "row"},
+                  "children":[
+                    {"component": "Edit", "id":"testListEdit","disabled":false, "$stores":{"data":{"path":  "address"}}},
+                    {"component": "Edit","disabled":false, "$stores":{"data":{"path":  "name"}}}
+                  ]
+                
+                }
+            },
+            {"component": "ReactNativePaper","subcomponent":"DataTable.Pagination",
+              "id":"pagination",
+              "$subscriptions":[{"store":"viewDef", "path":"../1"},{"store":"viewDef", "path":"../1/pagination/page"}],
+              "page":{"$function":"getStoreState", "store": "viewDef", "path":"../1/pagination/page"},
+              "numberOfPages":{"$function":"getStoreState", "store": "viewDef", "path":"../1/pagination", "jsonataDef":"$max([$ceil(length/itemPerPage),1])"},
+              "label":{"$function":"getStoreState", "store": "viewDef", "path":"../1/pagination", "jsonataDef":"page+1&' / '&$max([$ceil(length/itemPerPage),1])"},
+              "onPageChange": { "$action": "setStoreState","store": "viewDef",
+                "path":"../1/pagination/page",
+                "value": { "$action": "getCallerArgs","path":"/0"}
+              }
+            }
+          ]
+        },
+        
+        { "component": "Button", "children": "Delete data store",
+          "id":"delButton1",
+           "onPress": { "$action": "deleteAsyncStore","names":["data"]},
+           "style": { "margin": 20 }
+        },
+            
+        { "component": "FormResult", "stores":["data"]
+        }
+      ]
+    }
+  ]
+}
