@@ -1,7 +1,6 @@
 {
   "component": "Slider",
   "$stores": { "data":{ "path": "slider" } },
-  "value": 90,
   "minimumValue": 0,
   "maximumValue": 1000000,
   "step": 1,

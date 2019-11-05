@@ -7,8 +7,19 @@
         { "component": "View", "id":"w",
           "children": [
             "aaaaaaa", 23424, true,false,
-            { "component": "Text", "children": "Demo", "id": "demo",
-              "$subscriptions":[{"store":"ownForm","path":"level2/email","jsonataDef":"{\"children\":$}"}]
+            { "component": "Text", "children": "Demo", "id": "demo2",
+              "$subscriptions":[{"store":"ownForm","path":"sliderrrrrr","jsonataDef":"{\"children\":$}"}],
+              "style": { "textAlign": "center", "fontSize": 25, "fontWeight": "bold" }
+            },
+            {
+              "component": "Slider",
+              "id":"sliderrrrrr",
+              "$stores": { "ownForm":{ "path": "sliderrrrrr" } },
+              "minimumValue": 0,
+              "maximumValue": 1000000,
+              "step": 1,
+              "minimumTrackTintColor": "#FFFF00",
+              "maximumTrackTintColor": "#000000"
             },
             { "component": "View", "$stores": { "ownForm":{ "path": "level2" } },
               "children": [
@@ -38,7 +49,7 @@
             { "component": "View", "style": {"flex": 1, "flexDirection": "row","padding":10,"backgroundColor":"#FFDDFF"},
               "children": [
                 { "component": "Text", "children": "subscribe" },
-                { "component": "Checkbox", "value": true, "style": { "marginRight": 20 },
+                { "component": "Checkbox", "style": { "marginRight": 20 },
                   "$stores": {  "ownForm":{ "path": "subscribe" } } ,"id":"t3"
                 },
                 { "$ref": "./Edit0.json",
@@ -57,11 +68,17 @@
                 "k":{
                   "type": "object",
                   "properties": { 
-                    "email":{"type":"string","minLength": 2,"maxLength": 10},
+                    "level2":{
+                      "type": "object",
+                      "properties": { 
+                        "email":{"type":"string","minLength": 2,"maxLength": 10}
+                      },
+                      "required":["email"]
+                    },
                     "username":{"type":"string","minLength": 2,"maxLength": 10},
                     "option":{"type":"string", "enum": ["a", "b", "c"]}
                   },
-                  "required":["email","fakeProp2"],
+                  "required":["fakeProp2"],
                   "additionalItems": true
                 }
               },

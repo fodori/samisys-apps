@@ -38,7 +38,7 @@
             { "component": "View", "id": "view1", "style": { "textAlign": "center", "fontSize": 25, "fontWeight": "bold" },
               "$stores":{"data":{"path": "xxxxxxxxxxxxxxxx"}},
               "children": [
-                { "component": "Text", "children": "Demo", "id": "demo",
+                { "component": "Text", "children": "Demo", "id": "demo1",
                   "$stores":{"data":{"path": "text0"}},
                   "$subscriptions":[{"store":"data","path":"/slider","jsonataDef":"{\"children\":$}"}],
                   "style": { "textAlign": "center", "fontSize": 25, "fontWeight": "bold" }
@@ -102,11 +102,15 @@
               "expanded": 1
             },
             { "$ref": "./Slider0.json"},
-            { "component": "Modal", "coverScreen": false ,
-              "animationIn":"slideInUp",
-              "animationOut":"slideOutDown",
-              "animationType":"slide",
-              "children": "This is a content of Modal, Hurray!!!!! This is a content of Modal, Hurray!!!!!" }
+            { "component": "View", "style": { "flex": "1", "flexDirection":"row" },
+              "children": [ 
+                { "component": "Modal", "coverScreen": false ,
+                  "animationIn":"slideInUp",
+                  "animationOut":"slideOutDown",
+                  "animationType":"slide",
+                  "children": "This is a content of Modal, Hurray!!!!! This is a content of Modal, Hurray!!!!!" }
+              ]
+            }
           ]
         },
         { "component": "FormResult", "stores":["ownForm","data","anotherStore"]  }
