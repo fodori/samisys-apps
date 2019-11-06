@@ -8,7 +8,7 @@
     "ModuleForm": {"$ref":"./ModuleFormExample1.json", "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k" } } }
   },   
   "navigationOptions": {
-    "initialRouteName": "ModuleForm",
+    "initialRouteName": "Complicate",
     "activeColor": "#f0edf6", 
     "inactiveColor": "#3e2465",
     "transitionConfig": "zoomOut",
