@@ -9,9 +9,9 @@
       "children": [
         "From Assets server", 
         { "component": "Edit",  "disabled": true, "label": "Notification server connection status", "$stores": { "globalSetting": { "path": "notificationServerStatus" } } },
-        { "component": "View", "id": "view0", "style": { "backgroundColor": "#DDDDFF", "flex": 1 },
+        { "component": "View", "id": "view0", "style": { "backgroundColor": "#DDDDFF"},
           "children": [
-            { "component": "View", "style": { "flex": 1 , "flexDirection":"row", "backgroundColor": "#AAFF" },
+            { "component": "View", "style": { "flexDirection":"row", "backgroundColor": "#AAFF" },
               "children": [
                 { "component": "Button", 
                   "transparent":true,
@@ -27,7 +27,7 @@
                 }
               ]
             },
-            { "component": "View", "style": { "flex": "1", "flexDirection":"row" },
+            { "component": "View", "style": {  "flexDirection":"row" },
               "children": [
                 {"component": "ReactNativePaper","subcomponent":"Chip","icon":"home", "children":"Nebraska"},
                 {"component": "ReactNativePaper","subcomponent":"Chip","icon":"delete", "children":"Alabama"},
@@ -102,7 +102,7 @@
               "expanded": 1
             },
             { "$ref": "./Slider0.json"},
-            { "component": "View", "style": { "flex": "1", "flexDirection":"row" },
+            { "component": "View", "style": { "flexDirection":"row" },
               "children": [ 
                 { "component": "Modal", "coverScreen": false ,
                   "animationIn":"slideInUp",
