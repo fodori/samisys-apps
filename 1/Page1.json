@@ -29,7 +29,7 @@
             },
             { "component": "View", "style": {  "flexDirection":"row" },
               "children": [
-                {"component": "ReactNativePaper","subcomponent":"Chip","icon":"home", "children":"Nebraska"},
+                {"component": "ReactNativePaper","subcomponent":"Chip","icon":"home", "children":"Nebraskaa"},
                 {"component": "ReactNativePaper","subcomponent":"Chip","icon":"delete", "children":"Alabama"},
                 {"component": "ReactNativePaper","subcomponent":"Chip","icon":"phone", "children":"Oklahoma"}
               ]
