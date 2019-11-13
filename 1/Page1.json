@@ -4,7 +4,7 @@
     {
       "component": "ScrollView",
       "id": "view00",
-      "style": { "backgroundColor": "#3F0", "flex": 1 },
+      "style": { "backgroundColor": "#0a0", "flex": 1 },
       "$stores":{"justforAnotherTest":{"path":  "view00"} },
       "children": [
         "From Assets server", 
