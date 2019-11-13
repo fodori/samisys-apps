@@ -9,9 +9,9 @@
       "children": [
         "From Assets server", 
         { "component": "Edit",  "disabled": true, "label": "Notification server connection status", "$stores": { "globalSetting": { "path": "notificationServerStatus" } } },
-        { "component": "View", "id": "view0", "style": { "backgroundColor": "#DDDDFF"},
+        { "component": "View", "id": "view0", "style": { "backgroundColor": "#DDDDFF", "flex": 1 },
           "children": [
-            { "component": "View", "style": { "flexDirection":"row", "backgroundColor": "#AAFF" },
+            { "component": "View", "style": { "flexDirection":"row", "backgroundColor": "#AAFF","flex": 1 },
               "children": [
                 { "component": "Button", 
                   "transparent":true,
