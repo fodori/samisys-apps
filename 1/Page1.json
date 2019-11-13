@@ -2,7 +2,7 @@
   "component":"SafeAreaView",
   "children":[
     {
-      "component": "ScrollView",
+      "component": "ScrollView", 
       "id": "view00",
       "style": { "backgroundColor": "#0aa", "flex": 1 },
       "$stores":{"justforAnotherTest":{"path":  "view00"} },
