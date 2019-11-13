@@ -4,7 +4,7 @@
     {
       "component": "ScrollView",
       "id": "view00",
-      "style": { "backgroundColor": "#0a0", "flex": 1 },
+      "style": { "backgroundColor": "#0aa", "flex": 1 },
       "$stores":{"justforAnotherTest":{"path":  "view00"} },
       "children": [
         "From Assets server", 
@@ -27,7 +27,7 @@
                 }
               ]
             },
-            { "component": "View", "style": {  "flexDirection":"row" },
+            { "component": "View", "style": {  "flexDirection":"row", "flex": 1 },
               "children": [
                 {"component": "ReactNativePaper","subcomponent":"Chip","icon":"home", "children":"Nebraskaa"},
                 {"component": "ReactNativePaper","subcomponent":"Chip","icon":"delete", "children":"Alabama"},
@@ -102,7 +102,7 @@
               "expanded": 1
             },
             { "$ref": "./Slider0.json"},
-            { "component": "View", "style": { "flexDirection":"row" },
+            { "component": "View", "style": { "flexDirection":"row", "flex": 1 },
               "children": [ 
                 { "component": "Modal", "coverScreen": false ,
                   "animationIn":"slideInUp",
