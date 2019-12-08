@@ -5,10 +5,11 @@
     "Complicate": {"$ref":"./Page1.json"}, 
     "Basic": {"$ref":"./Page2.json"},
     "Clone": {"$ref":"./Page3.json"}, 
-    "ModuleForm": {"$ref":"./ModuleFormExample1.json", "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k" } } }
+    "ModuleForm": {"$ref":"./ModuleFormExample1.json", "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k" } } },
+    "HttpTest": {"$ref":"./HttpTest.json" }
   },   
   "navigationOptions": {
-    "initialRouteName": "Complicate",
+    "initialRouteName": "HttpTest", 
     "activeColor": "#f0edf6", 
     "inactiveColor": "#3e2465",
     "transitionConfig": "zoomOut",
