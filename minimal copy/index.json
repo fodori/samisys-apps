@@ -1,0 +1,46 @@
+{
+  "component": "Navigator",
+  "navigatorType": "DrawerNavigator","id":"2level",
+  "children": {
+    "a1": {
+      "component":"SafeAreaView",
+      "children":[
+        {
+          "component": "Text",
+          "style": {
+            "backgroundColor": "#0F0"
+          },
+          "children": "Page 1awa"
+        },
+        { "component": "Button", "children": "Navigate to Green",
+          "onPress": {"$action":"navigate","route":"a2"}
+        }
+      ],
+      "navigationOptions": {
+        "title":"Application Setting",
+        "header":null
+      }
+    }, 
+    "a2": {
+      "component":"SafeAreaView",
+      "children":[
+        {
+          "component": "Text",
+          "style": {
+            "backgroundColor": "#0F0",
+            "height": "100%"
+          },
+          "children": "Page A2",
+          "navigationOptions": {
+            "title":"Page A2",
+            "headerStyle":{}
+          }
+        }
+      ]
+    }
+  },
+  "navigationOptions": {
+    "initialRouteName": "a1",
+    "hideStatusBar": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "component":"SafeAreaView",
+  "children":[
+    {
+      "component": "ScrollView", "style": {"flex": 1 }, "id":"root",
+      "children": [
+        { "component": "View", "id":"w",
+          "children": [
+            { "component": "Edit", "placeholder":"httpname username", "id":"httpname",
+              "$stores": { "data":{ "path": "httpname" } }
+            }
+          ]
+        },
+        { "component": "Button", "children": "API call get",
+          "onPress": {
+            "$action":"httpRequest",
+            "url":"http://localhost:3001/gettest",
+            "method":"GET",
+            "responseContentType":"json",
+            "content":{"$function":"getStoreState", "store": "data", "path":"/httpname"}}
+        },
+        { "component": "Button", "children": "API call post",
+          "onPress": {
+            "$action":"httpRequest",
+            "url":"http://localhost:3001/posttest",
+            "method":"POST",
+            "responseContentType":"json",
+            "body":{
+              "id":{"$function":"getStoreState", "store": "data", "path":"/httpname"}
+            }
+          }
+        },
+
+        { "component": "Button", "children": "api call with pagination + showwarn",
+          "onPress": {"$action":"showWarn","params":[
+            {
+              "$action":"httpRequest",
+              "url":"http://localhost:3001/gettestpagination?page=0&offset=5&sort=address&order=desc",
+              "method":"GET",
+              "responseContentType":"json"
+            },
+            "ccc"
+            ]}
+        },
+        { "component": "FormResult", "stores":["data","data.error"] }
+      ]
+    }
+  ]
+}
