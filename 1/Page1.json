@@ -94,13 +94,6 @@
                 {"$action":"getStoreState","store": "globalSetting","path":"/notificationServerUrl"}
                 ]}
             },
-            { "component": "Accordion",
-              "dataArray": [
-                { "title": "First Element", "content": "Lorem ipsum dolor sit amet" },
-                { "title": "Second Element", "content": "Lorem ipsum dolor sit ametsasdfsdfaaaa" }
-              ],
-              "expanded": 1
-            },
             { "$ref": "./Slider0.json"},
             { "component": "View", "style": { "flexDirection":"row", "flex": 1 },
               "children": [ 

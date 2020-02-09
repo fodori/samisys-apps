@@ -1,8 +1,0 @@
-{
-  "component": "Text",
-  "style": {
-    "backgroundColor": "#0F0",
-    "height": "100%"
-  },
-  "children": "Page 2"
-}

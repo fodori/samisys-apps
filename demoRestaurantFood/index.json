@@ -4,7 +4,7 @@
              "@media (orientation: landscape)": { "flexDirection":"row" } },
   "children":[  
     {"component":"StatusBar","backgroundColor":"#f8ac3e", "barStyle":"dark-content", "hidden":false,"translucent":true},
-    {"component": "View", "style": {"flex": 5, "height":"100%"},
+    {"component": "SafeAreaView", "style": {"flex": 5, "height":"100%"},
        "children":[
         {"component": "View", "style": {  "margin":8, "flexDirection":"row","justifyContent":"space-between","alignItems":"flex-start" },
             "children":[
@@ -31,23 +31,26 @@
     {"component": "View",  "style": { "backgroundColor":  "#f8ac3e", "flex": 2 },
       "children":[
         {"component": "View",  "style": { "backgroundColor": "#FFF", "flex": 1,"padding":30,
-          "flexDirection":"column","justifyContent":"space-between","alignItems":"stretch",
+          
           "borderWidth": 0, "borderRadius":40,"borderColor": "#FFF","width":"100%","alignSelf":"center",
           "shadowColor":"#000","shadowOffset":{"width": 3,"height": 3},"shadowOpacity":0.4,"shadowRadius":5 },
           "children":[ 
-            {"component": "View", "style": {"marginBottom":10, "flexDirection":"row","justifyContent":"space-between","alignItems":"flex-start"},
-            "children":[ 
-              { "component": "Text", "children": "2 items in cart","style":{"color":"$primary","fontSize":16, "fontWeight": "bold"}},
-              { "component": "Text", "children": "$20","style":{"color":"#444","fontSize":16, "fontWeight": "bold"}}
-            ]},
-            {"component": "View", "style": {"flex": 3, "flexDirection":"row","justifyContent":"space-between","alignItems":"flex-start","borderTopWidth":1,"paddingTop":16},
-            "children":[ 
-              { "component": "Text", "children": "35 Bond Street, London","style":{"color":"#444","fontSize":12, "fontWeight": "bold"}},
-              { "component": "Text", "children": "234 Km","style":{"color":"#444","fontSize":12, "fontWeight": "bold"}}
-            ]},
-              { "component": "Button", "children": "Order", "mode":"contained", "color":"#000", "onPress": {"$action":"openDrawer"},
-                "style":{ "borderRadius":50,"padding":8,"opacity":0.8}
-              }
+            {"component": "SafeAreaView",  "style": { "flexDirection":"column","justifyContent":"space-between","alignItems":"stretch","width":"100%","alignSelf":"center" },
+            "children":[
+              {"component": "View", "style": {"marginBottom":10, "flexDirection":"row","justifyContent":"space-between","alignItems":"flex-start"},
+              "children":[ 
+                { "component": "Text", "children": "2 items in cart","style":{"color":"$primary","fontSize":16, "fontWeight": "bold"}},
+                { "component": "Text", "children": "$20","style":{"color":"#444","fontSize":16, "fontWeight": "bold"}}
+              ]},
+              {"component": "View", "style": {"flex": 3, "flexDirection":"row","justifyContent":"space-between","alignItems":"flex-start","borderTopWidth":1,"paddingTop":16},
+              "children":[ 
+                { "component": "Text", "children": "35 Bond Street","style":{"color":"#444","fontSize":12, "fontWeight": "bold"}},
+                { "component": "Text", "children": "234 Km","style":{"color":"#444","fontSize":12, "fontWeight": "bold"}}
+              ]},
+                { "component": "Button", "children": "Order", "mode":"contained", "color":"#000", "onPress": {"$action":"openDrawer"},
+                  "style":{ "borderRadius":50,"padding":8,"opacity":0.8}
+                }
+            ]}
            ]
         }
       ]

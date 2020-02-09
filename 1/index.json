@@ -9,7 +9,7 @@
     "HttpTest": {"$ref":"./HttpTest.json" }
   },   
   "navigationOptions": {
-    "initialRouteName": "HttpTest", 
+    "initialRouteName": "Complicate", 
     "activeColor": "#f0edf6", 
     "inactiveColor": "#3e2465",
     "transitionConfig": "zoomOut",

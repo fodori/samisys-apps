@@ -1,4 +1,0 @@
-{ "component": "Edit", "id":"greeting",
-  "placeholder": {"$function":"t","keys":"Hi"},
-  "$stores": { "anotherStore":{"path": "emaill" } }
- }
