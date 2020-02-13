@@ -90,10 +90,7 @@
                 "ccc"
                 ]}
             },{ "component": "Button", "children": "Reload URL", "style": { "margin": 20 },
-              "onPress": {"$action":"refreshApp","params":[
-                {"$action":"getStoreState","store": "globalSetting","path":"/contentServerUrl"},
-                {"$action":"getStoreState","store": "globalSetting","path":"/notificationServerUrl"}
-                ]}
+              "onPress": {"$action":"reloadApp"}
             },
             { "$ref": "./Slider0.json"},
             { "component": "View", "style": { "flexDirection":"row", "flex": 1 },
