@@ -8,6 +8,7 @@
       "$stores":{"justforAnotherTest":{"path":  "view00"} },
       "children": [
         "From Assets server", 
+        {"component":"StatusBar","backgroundColor":"#0aa", "barStyle":"dark-content", "hidden":false,"translucent":true},
         { "component": "Edit",  "disabled": true, "label": "Notification server connection status", "$stores": { "globalSetting": { "path": "notificationServerStatus" } } },
         { "component": "View", "id": "view0", "style": { "backgroundColor": "#DDDDFF", "flex": 1 },
           "children": [

@@ -1,0 +1,13 @@
+{
+  "component":"SafeAreaView","id":"View001",
+  "style": {"borderWidth": 10, "flex":1,"backgroundColor":"#a99","borderColor":"red"
+           },
+  "children":[   
+    {"component":"StatusBar","backgroundColor":"#eee", "barStyle":"dark-content", "hidden":false,"translucent":false},
+    "this is a message"
+  ],
+  "$stylebuild": {
+    "$primary": "#0275d8",
+    "$secondary": "#ffe16e"
+  }
+}

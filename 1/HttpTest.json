@@ -6,6 +6,7 @@
       "children": [
         { "component": "View", "id":"w",
           "children": [
+            {"component":"StatusBar","backgroundColor":"#0aa", "barStyle":"dark-content", "hidden":true,"translucent":true},
             { "component": "Edit", "placeholder":"httpname username", "id":"httpname",
               "$stores": { "data":{ "path": "httpname" } }
             }
