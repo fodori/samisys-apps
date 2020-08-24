@@ -1,16 +1,21 @@
-{ "component": "Navigator", "navigatorType": "DrawerNavigator",
+{
+  "component": "Navigator",
+  "navigatorType": "DrawerNavigator",
   "children": {
-    "Table": {"$ref":"./Table.json"}, 
-    "Tabs": {"$ref":"./Page0.json"}, 
-    "Complicate": {"$ref":"./Page1.json"}, 
-    "Basic": {"$ref":"./Page2.json"},
-    "Clone": {"$ref":"./Page3.json"}, 
-    "ModuleForm": {"$ref":"./ModuleFormExample1.json", "$storesModifier": {"ownForm":{ "replaceTo": "data","path":"k" } } },
-    "HttpTest": {"$ref":"./HttpTest.json" }
-  },   
+    "Table": { "$ref": "./Table.json" },
+    "Tabs": { "$ref": "./Page0.json" },
+    "Complicate": { "$ref": "./Page1.json" },
+    "Basic": { "$ref": "./Page2.json" },
+    "Clone": { "$ref": "./Page3.json" },
+    "ModuleForm": {
+      "$ref": "./ModuleFormExample1.json",
+      "$storesModifier": { "ownForm": { "replaceTo": "data", "path": "k" } }
+    },
+    "HttpTest": { "$ref": "./HttpTest.json" }
+  },
   "navigationOptions": {
-    "initialRouteName": "Complicate", 
-    "activeColor": "#f0edf6", 
+    "initialRouteName": "Complicate",
+    "activeColor": "#f0edf6",
     "inactiveColor": "#3e2465",
     "transitionConfig": "zoomOut",
     "barStyle": {
@@ -31,13 +36,13 @@
     "en": {
       "translation": {
         "This is an e-mail placeholder": "Just placeholder",
-        "Hi":"Hi!"
+        "Hi": "Hi!"
       }
     },
     "hu": {
       "translation": {
-        "This is an e-mail placeholder": "Ez egy helykitöltő",
-        "Hi":"Hogy vagy??"
+        "This is an e-mail placeholder": "Ez egy helykitöltő!!!!",
+        "Hi": "Hogy vagy??"
       }
     }
   }
