@@ -1,6 +1,6 @@
 {
   "component": "Navigator",
-  "navigatorType": "DrawerNavigator","id":"2level",
+  "navigatorType": "DrawerNavigator","id":"2levell",
   "children": {
     "a1": {
       "component":"SafeAreaView",
