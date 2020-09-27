@@ -1,10 +1,11 @@
 {
   "component": "Navigator",
-  "navigatorType": "DrawerNavigator","id":"2levelll",
+  "navigatorType": "DrawerNavigator",
+  "id": "2levelll",
   "children": {
     "a1": {
-      "component":"SafeAreaView",
-      "children":[
+      "component": "SafeAreaView",
+      "children": [
         {
           "component": "Text",
           "style": {
@@ -12,28 +13,26 @@
           },
           "children": "Page 1awa"
         },
-        { "component": "Button", "children": "Navigate to Green",
-          "onPress": {"$action":"navigate","route":"a2"}
-        }
+        { "component": "Button", "children": "Navigate to Green", "onPress": { "$action": "navigate", "route": "a2" } }
       ],
       "navigationOptions": {
-        "title":"Application Setting",
-        "header":null
+        "title": "Application Setting",
+        "header": null
       }
-    }, 
+    },
     "a2": {
-      "component":"SafeAreaView",
-      "children":[
+      "component": "SafeAreaView",
+      "children": [
         {
           "component": "Text",
           "style": {
             "backgroundColor": "#0F0",
             "height": "100%"
           },
-          "children": "Page A222299hu89h9",
+          "children": "Page A222299hu8lkjhklhj9h9",
           "navigationOptions": {
-            "title":"Page A2",
-            "headerStyle":{}
+            "title": "Page A2",
+            "headerStyle": {}
           }
         }
       ]
