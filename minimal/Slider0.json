@@ -3,7 +3,7 @@
   "$stores": { "data":{ "path": "slider" } },
   "value": 90,
   "minimumValue": 0,
-  "maximumValue": 1000000,
+  "maximumValue": 100000,
   "step": 1,
   "minimumTrackTintColor": "#FFFFFF",
   "maximumTrackTintColor": "#000000"
