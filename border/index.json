@@ -4,7 +4,7 @@
            },
   "children":[   
     {"component":"StatusBar","backgroundColor":"#eee", "barStyle":"dark-content", "hidden":false,"translucent":false},
-    "this is a message"
+    "this is a messagemmmm"
   ],
   "$stylebuild": {
     "$primary": "#0275d8",
